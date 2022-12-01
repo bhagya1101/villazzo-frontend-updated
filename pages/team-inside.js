@@ -22,7 +22,7 @@ const TeamsInside = ({
       return `${src}?w=${width}&q=${quality || 75}`
     }
   return (
-    <>
+    <> 
       <div className="bg-img bg-white">
         <Header navigation={navigation} global={global} />
 		<div className="container">

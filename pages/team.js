@@ -5,6 +5,7 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import { fetchAPI } from "../lib/api"
 import Link from 'next/link'
+import axios from 'axios'
 
 
 const Teams = ({
@@ -19,7 +20,7 @@ const Teams = ({
 
   const [toggleMenuClass, toggleMenu] = useState(false)
   const [subMenuClass, subMenuToggleMenu] = useState(false)
-
+  
   const navRef = React.useRef(null);
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
@@ -27,6 +28,8 @@ const Teams = ({
 
   const onRemoveClick = (e) => {
     navRef.current.classList.remove("show_popup");
+    setShowSuccessMessage(false);
+        setShowFailureMessage(false);
   };
   
   // States for contact form fields
@@ -89,15 +92,7 @@ const Teams = ({
 
   // Handles the submit event on form submit.
   const handleSubmit = async (event) => {
-    const res = await fetch(`api/contact`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(inputs),
-			})
-
-    // Stop the form from submitting and refreshing the page.
+  // Stop the form from submitting and refreshing the page.
     event.preventDefault()
     
     let isValidForm = handleValidation();
@@ -112,25 +107,8 @@ const Teams = ({
             phoneNo: phone,
             message: message,
           }
-        },
+        }
       );
-      const qs = require('qs');
-        axios.post('https://webdevfolio.com/Villazzomail/Villazzomail.php',  qs.stringify({
-            "firstName": fullname,
-            "lastName": lastName,
-            "email": email,
-            "phoneNo": phone,
-            "message": message,
-
-        }))
-        .then((res) => {
-          console.log(`statusCode: ${res.statusCode}`)
-          console.log(res)
-          console.log(`statusCode: ${res.data}`)
-        })
-        .catch((error) => {
-          console.error(error)
-        })
       
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
@@ -141,10 +119,6 @@ const Teams = ({
       setPhone("");
       setMessage("");
 
-      setTimeout(() => {
-        setShowSuccessMessage(false);
-        setShowFailureMessage(false);
-      }, 2500);
       return;
     }
       setShowSuccessMessage(false);
@@ -306,7 +280,7 @@ const Teams = ({
                           <div className="final_msg_wrap">
                             {showSuccessMessage && (
                               <p className="thankyou_msg">
-                                Thankyou! We will connect you shortly.
+                                Thank you for your message! A team member from Villazzo Realty will get back to you shortly.
                               </p>
                             )}
                             {showFailureMessage && (

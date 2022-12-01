@@ -14,6 +14,8 @@ const Footer = ({ footerProp }) => {
 
   const onRemoveClick = (e) => {
     navRef.current.classList.remove("show_popup");
+    setShowSuccessMessage(false);
+        setShowFailureMessage(false);
   };
   
   // States for contact form fields
@@ -121,10 +123,6 @@ const Footer = ({ footerProp }) => {
       setPhone("");
       setMessage("");
 
-      setTimeout(() => {
-        setShowSuccessMessage(false);
-        setShowFailureMessage(false);
-      }, 2500);
       return;
     }
       setShowSuccessMessage(false);
@@ -342,7 +340,7 @@ const Footer = ({ footerProp }) => {
                           <div className="final_msg_wrap">
                             {showSuccessMessage && (
                               <p className="thankyou_msg">
-                                Thankyou! We will connect you shortly.
+                                Thank you for your message! A team member from Villazzo Realty will get back to you shortly.
                               </p>
                             )}
                             {showFailureMessage && (

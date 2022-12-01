@@ -26,7 +26,7 @@ const Reviews = ({
   let mainReviewsList = []
   reviewsList.forEach((element) => {
     mainReviewsList.push(element)
-  })
+  }) 
   return (
     <>
       <div className="bg-img bg-white reviews_pg_wrap">

@@ -5,6 +5,7 @@ import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
+import axios from 'axios'
 
 
 const Videos = ({
@@ -38,7 +39,7 @@ const Videos = ({
       mdl.current.classList.add("show_popup");
       e.target.classList.add("active");
       let param = e.target.parentNode.getAttribute("data-url");
-      console.log(param);
+      console.log(param); 
       mdlIframe.current.setAttribute("src",param);
       setTimeout(() => {
         mdlLoader.current.classList.add("hide_loader");

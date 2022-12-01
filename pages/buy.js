@@ -44,10 +44,10 @@ const Buy = ({ global, homepage, footerData, navigation }) => {
           /> */}
           <div className="blankDiv"></div>
           <video loop muted autoPlay={"autoplay"} playsinline>
-              <source src={global.attributes.videoURL} type="video/mp4" />
-              <source src={global.attributes.videoURL} type="video/webm" />
+              <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/mp4" />
+              <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/webm" />
           </video>
-        </div>
+        </div> 
         <Header navigation={navigation} global={global} />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
         <div className="buttons-wrap">

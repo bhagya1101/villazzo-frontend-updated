@@ -43,10 +43,6 @@ const Home = ({
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
   };
-
-  const onRemoveClick = (e) => {
-    navRef.current.classList.remove("show_popup");
-  };
   
   // States for contact form fields
   const [fullname, setFullname] = useState("");
@@ -152,11 +148,7 @@ const Home = ({
       setEmail("");
       setPhone("");
       setMessage("");
-
-      setTimeout(() => {
-        setShowSuccessMessage(false);
-        setShowFailureMessage(false);
-      }, 2500);
+      
       return;
     }
       setShowSuccessMessage(false);
@@ -168,6 +160,11 @@ const Home = ({
       setPhone("");
       setMessage("");
   }
+  const onRemoveClick = (e) => {
+    navRef.current.classList.remove("show_popup");
+    setShowSuccessMessage(false);
+    setShowFailureMessage(false);
+  };
   return (
     <>
       <div className="bg-img">

@@ -657,6 +657,12 @@ h3.propertytxt {
 .selltxt p {
   margin: 0 auto;
   max-width: 80%;
+  letter-spacing: 1px;
+  line-height: 35px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Lato",ui-sans-serif;
+  font-size: 22px;
 }
 .centered {
   text-align: center;
@@ -946,8 +952,8 @@ h3.propertytxt {
 .form-item.full-width {width:100%;}
 .form-item.full-width .error_msg {bottom: 20px;}
 .error_msg {color: #ff0000;margin: 0px;font-size: 14px;position: absolute;bottom: 10px;line-height: 1;}
-.final_msg_wrap .error_msg {position: relative;bottom: unset;margin: 30px 0px 0px;padding: 20px;font-size: 18px;background: #ff8484;color: #fff;text-align: center;}
-.final_msg_wrap .thankyou_msg {position: relative;bottom: unset;margin: 30px 0px 0px;padding: 20px;font-size: 18px;background: #0080007a;text-align: center;color: #fff;}
+.final_msg_wrap .error_msg {position: relative;bottom: unset;margin: 30px 0px 0px;padding: 20px;background: #ff8484;color: #fff;text-align: center;letter-spacing: 1px;}
+.final_msg_wrap .thankyou_msg {position: relative;bottom: unset;margin: 30px 0px 0px;padding: 20px;background: #0080007a;text-align: center;color: #fff;max-width:605px;line-height: 35px;font-weight: 400;font-family: "Lato",ui-sans-serif;font-size: 22px;}
 .input-name{margin-right: 10px;}
 .input-name:placeholder{font-size: 18px;}
 .contact-form h2{font-size: 55px;text-align: center;font-weight: 300;padding-bottom: 20px;}
@@ -1170,6 +1176,8 @@ h3.propertytxt {
 
   .property-box img {height: 240px !important;}
   .sell-search-box .contact-btn a {padding: 12px 40px;line-height: 14px;font-size: 14px;width: unset;height: unset;}
+
+  .selltxt p, .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {line-height: 30px;font-size: 20px;}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1368,6 +1376,7 @@ h3.propertytxt {
   .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {padding: 10px 40px;width: auto;height: auto;}
   .video-name {font-size: 18px;line-height: 24px;}
 
+  .selltxt p, .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {line-height: 24px;font-size: 16px;}
 }
 
 @media only screen and (max-width: 768px) {
