@@ -350,7 +350,7 @@ const Header = ({ navigation, global }) => {
                                 value={phone}
                                 onChange={handleChange}
                                 className="input-name contact-lebel"
-                                max-length="12"
+                                
                               />
                               {errors?.email && (
                                 <p className="error_msg">Phone number cannot be empty.</p>

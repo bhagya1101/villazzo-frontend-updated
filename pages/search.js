@@ -42,14 +42,14 @@ const Search = ({
             alt="Villazzo"
           /> */}
           <div className="blankDiv"></div>
-          <video loop muted autoPlay={"autoplay"} playsinline>
+          <video loop muted autoPlay={"autoplay"} >
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/mp4" />
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/webm" />
           </video>
         </div>
         <Header navigation={navigation} global={global} />
         <div id="searchPage" className="page_layout">
-            <iframe id="_dsSearchAgent_Idx_Frame_0" name="_dsSearchAgent_Idx_Frame_0" src={searchURL} scrolling="no" style={{width: '100%', height: '940px', background: 'transparent', overflow: 'hidden'}} allowTransparency="true" frameBorder="0" seamless="seamless" mozAllowFullscreen="true" webkitAllowFullScreen="true" allowFullScreen="true" sandbox="allow-top-navigation allow-scripts allow-forms allow-modals allow-popups allow-same-origin"></iframe>
+            <iframe id="_dsSearchAgent_Idx_Frame_0" name="_dsSearchAgent_Idx_Frame_0" src={searchURL} scrolling="no" style={{width: '100%', height: '940px', background: 'transparent', overflow: 'hidden'}} frameBorder="0" seamless="seamless" mozAllowFullscreen="true" webkitAllowFullScreen="true" allowFullScreen="true" sandbox="allow-top-navigation allow-scripts allow-forms allow-modals allow-popups allow-same-origin"></iframe>
             {/* <iframe id="_dsSearchAgent_Idx_Frame_0" name="_dsSearchAgent_Idx_Frame_0" src="https://idx.diversesolutions.com/link/477464#-" scrolling="no" style={{width: '100%', height: '940px', background: 'transparent', overflow: 'hidden'}} allowTransparency="true" frameBorder="0" seamless="seamless" mozAllowFullscreen="true" webkitAllowFullScreen="true" allowFullScreen="true" sandbox="allow-top-navigation allow-scripts allow-forms allow-modals allow-popups allow-same-origin"></iframe> */}
         </div>
       </div>

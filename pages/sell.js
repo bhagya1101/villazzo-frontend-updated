@@ -142,7 +142,7 @@ const Sell = ({
             alt="Villazzo"
           /> */}
           <div className="blankDiv"></div>
-          <video loop muted autoPlay={"autoplay"} playsinline>
+          <video loop muted autoPlay={"autoplay"} >
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`}  type="video/mp4" />
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/webm" />
           </video>
@@ -233,7 +233,7 @@ const Sell = ({
                                 value={phone}
                                 onChange={handleChange}
                                 className="input-name contact-lebel"
-                                max-length="12"
+                                
                               />
                               {errors?.email && (
                                 <p className="error_msg">Phone number cannot be empty.</p>
