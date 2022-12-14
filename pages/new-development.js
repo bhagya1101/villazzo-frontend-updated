@@ -140,7 +140,7 @@ const NewDevelopment = ({
 				<h1 className="sold-heading">NEW DEVELOPMENT</h1>
 				<div className="property-wrap">
 					{newdevelopmentpage.attributes.Proprties.map((element, index) => (
-					<div key={element.key} className="property-box">
+					<div key={element} className="property-box">
 						<p className="img_Wrap">
 							<Image
 								loader={myLoader}

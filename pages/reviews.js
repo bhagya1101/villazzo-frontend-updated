@@ -46,7 +46,7 @@ const Reviews = ({
               <h2 className="sliderHeader">REVIEWS</h2>
               <Slider {...settings}>
                   {mainReviewsList.map((element) => (
-                    <div key={mainReviewsList.key} className="slider-content">
+                    <div key={element} className="slider-content">
                         <p>{element.Content}</p>
                     </div>
                   ))}

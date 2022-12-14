@@ -62,7 +62,7 @@ const Videos = ({
             <h1 className="video-heading">VIDEOS</h1>
             <div className={`video-wrap ${showMore ? "show-all" : ""}`}>
               {mainvideosList.map((element) => (
-              <div key={mainvideosList.key} className="video-box">
+              <div key={mainvideosList} className="video-box">
                 <div className="video_item_wrap" data-url={element.youtubeEmebedURL}>
                   <iframe src={element.youtubeEmebedURL} title="YouTube video player"></iframe>
                   <a href="javascript:;" className="youtubeIcon" onClick={youtubeVideo}></a>
